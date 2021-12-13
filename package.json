@@ -1,0 +1,26 @@
+{
+  "name": "trabalho-programacao",
+  "version": "1.0.0",
+  "description": "Trabalho de API REST com JSON",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuiNab/Sec4u.git"
+  },
+  "author": "Guilherme São Marcos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuiNab/Sec4u/issues"
+  },
+  "homepage": "https://github.com/GuiNab/Sec4u#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cors": "^2.8.5",
+    "experss": "0.0.1-security",
+    "express": "^4.17.1"
+  }
+}

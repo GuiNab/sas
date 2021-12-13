@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>API REST SEC4U</title>
+</head>
+<body>
+    <form method="get">
+		<h2>Busque por um ID que voltarei à você uma frase</h2>
+		<input type="text" name="" placeholder="Digite o ID aqui" required="">
+		<button type="submit">Clique para buscar a frase</button>
+	</form>
+
+	<br>
+	<br>
+	<br>
+	<br>
+
+
+	a frase será escrita abaixo:
+	<br>
+	X
+    <br>
+</body>
+<script>
+
+    async function getContent(){
+
+        fetch('http://localhost:3000/').then(res => console.log(res, 'foi')).catch(err => console.log(err, 'num foi'));
+
+        try{
+            var response = await fetch('http://localhost:3000/');
+
+            console.log(response);
+
+            var data = await response.json();
+
+            show(data);
+
+        }catch(error){
+            console.log(error);
+        }
+    }
+
+    getContent();
+
+    function show(ids){
+        let output = '';
+
+        for( let id of ids){
+            output += `<li>${id.title}</li>`;
+            console.log('id = ', id, 'title = ', output);
+        }
+
+        document.querySelector('main').innerHTML = output;
+    }
+
+</script>
+</html>
